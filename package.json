@@ -17,7 +17,7 @@
     },
     "dependencies": {
         "@noble/ed25519": "^2.1.0",
-        "discord-api-types": "^0.37.90",
+        "discord-api-types": "^0.37.91",
         "itty-router": "^5.0.17"
     },
     "packageManager": "yarn@4.2.2"
