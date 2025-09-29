@@ -14,12 +14,12 @@ import {
   MessageFlags,
 } from "discord-api-types/payloads/v10";
 
-const models: Record<string, BaseAiTextGenerationModels> = {
-  "phi-2": "@cf/microsoft/phi-2",
-  "gemma-7b": "@hf/google/gemma-7b-it",
-  "qwen-1-5-7b": "@cf/qwen/qwen1.5-7b-chat-awq",
-  "llama-3-8b": "@cf/meta/llama-3-8b-instruct",
-  "tinyllama-1-1b": "@cf/tinyllama/tinyllama-1.1b-chat-v1.0",
+const models: Record<string, keyof AiModels> = {
+  "qwen2-5-coder-32b-instruct": "@cf/qwen/qwen2.5-coder-32b-instruct",
+  "llama-4-scout-17b-16e-instruct": "@cf/meta/llama-4-scout-17b-16e-instruct",
+  "llama-3-1-8b-instruct-fp8": "@cf/meta/llama-3.1-8b-instruct-fp8",
+  "gemma-3-12b-it": "@cf/google/gemma-3-12b-it",
+  "mistral-small-3-1-24b-instruct": "@cf/mistralai/mistral-small-3.1-24b-instruct",
 };
 
 interface ImmediateAnswer {
@@ -42,7 +42,7 @@ const sendDeferred = async (interaction: APIInteraction, env: Env, data: any) =>
 const handleDeferred = async (
   interaction: APIApplicationCommandInteraction,
   prompt: string,
-  model: BaseAiTextGenerationModels,
+  model: keyof AiModels,
   env: Env
 ) => {
   try {

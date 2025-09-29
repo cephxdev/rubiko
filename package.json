@@ -11,15 +11,14 @@
     "format": "prettier . --write"
   },
   "devDependencies": {
-    "@cloudflare/workers-types": "^4.20250517.0",
-    "prettier": "3.5.3",
-    "typescript": "^5.8.3",
-    "wrangler": "^4.15.2"
+    "prettier": "3.6.2",
+    "typescript": "^5.9.2",
+    "wrangler": "^4.40.2"
   },
   "dependencies": {
-    "@noble/ed25519": "^2.2.3",
-    "discord-api-types": "^0.38.8",
-    "itty-router": "^5.0.18"
+    "@noble/ed25519": "^3.0.0",
+    "discord-api-types": "^0.38.26",
+    "itty-router": "^5.0.22"
   },
-  "packageManager": "pnpm@10.11.0+sha512.6540583f41cc5f628eb3d9773ecee802f4f9ef9923cc45b69890fb47991d4b092964694ec3a4f738a420c918a333062c8b925d312f42e4f0c263eb603551f977"
+  "packageManager": "pnpm@10.17.1+sha512.17c560fca4867ae9473a3899ad84a88334914f379be46d455cbf92e5cf4b39d34985d452d2583baf19967fa76cb5c17bc9e245529d0b98745721aa7200ecaf7a"
 }
