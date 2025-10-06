@@ -12,8 +12,8 @@
   },
   "devDependencies": {
     "prettier": "3.6.2",
-    "typescript": "^5.9.2",
-    "wrangler": "^4.40.2"
+    "typescript": "^5.9.3",
+    "wrangler": "^4.42.0"
   },
   "dependencies": {
     "@noble/ed25519": "^3.0.0",
