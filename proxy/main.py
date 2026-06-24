@@ -81,6 +81,4 @@ def not_found(error):
 
 
 if __name__ == "__main__":
-  print(f"listening on {PROXY_HOST}:{PROXY_PORT}")
-
   app.run(host=PROXY_HOST, port=PROXY_PORT, debug=False)
