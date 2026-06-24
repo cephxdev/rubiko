@@ -11,14 +11,14 @@
     "format": "prettier . --write"
   },
   "devDependencies": {
-    "prettier": "3.6.2",
-    "typescript": "^5.9.2",
-    "wrangler": "^4.40.2"
+    "prettier": "3.8.4",
+    "typescript": "^6.0.3",
+    "wrangler": "^4.103.0"
   },
   "dependencies": {
-    "@noble/ed25519": "^3.0.0",
-    "discord-api-types": "^0.38.26",
-    "itty-router": "^5.0.22"
+    "@noble/ed25519": "^3.1.0",
+    "discord-api-types": "^0.38.49",
+    "itty-router": "^5.0.24"
   },
-  "packageManager": "pnpm@10.17.1+sha512.17c560fca4867ae9473a3899ad84a88334914f379be46d455cbf92e5cf4b39d34985d452d2583baf19967fa76cb5c17bc9e245529d0b98745721aa7200ecaf7a"
+  "packageManager": "pnpm@11.1.1+sha512.d1fdf5f73c617b64fa1a56a81c3c8dfe0e966e33a6010aa256b517ae77be21d93e05affc0de1a83b0e4f29d569f68b446ae8f068cd7247c0bb3df0fb4d7bdf9a"
 }

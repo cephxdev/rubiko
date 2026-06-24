@@ -76,7 +76,16 @@ interface NekosResponse {
 const fetchNekos = async (baseUrl: string, category: NekosCategory, amount: number = 1): Promise<NekosResponse> => {
   const url = `${baseUrl}/${category}` + (amount > 1 ? `?amount=${amount}` : "");
 
-  return fetch(url, { headers: { "User-Agent": USER_AGENT } }).then((r) => r.json());
+  return fetch(url, { headers: { "User-Agent": USER_AGENT } })
+    .then(async (r) => {
+      const text = await r.text();
+      try {
+        return JSON.parse(text) as NekosResponse;
+      } catch (e) {
+        console.error(`Failed to parse JSON; status: ${r.status}, data: ${text}`);
+        throw e;
+      }
+    });
 };
 
 export interface Action {
