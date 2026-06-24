@@ -12,6 +12,18 @@ PROXY_PORT = 5000
 PROXY_HOST = "0.0.0.0"
 
 EXCLUDED_HEADERS = {"host", "connection", "content-length", "transfer-encoding"}
+HOP_BY_HOP_RESPONSE_HEADERS = {
+  "connection",
+  "keep-alive",
+  "proxy-authenticate",
+  "proxy-authorization",
+  "te",
+  "trailer",
+  "transfer-encoding",
+  "upgrade",
+  "content-length",
+  "content-encoding",
+}
 
 
 def validate_user_agent() -> bool:
@@ -43,7 +55,7 @@ def forward_request(method: str, path: str) -> Tuple[Response, int]:
 
     response_headers = {}
     for header, value in response.headers.items():
-      if header.lower() not in {"content-encoding"}:
+      if header.lower() not in HOP_BY_HOP_RESPONSE_HEADERS:
         response_headers[header] = value
 
     return Response(
